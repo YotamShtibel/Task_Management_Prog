@@ -124,7 +124,7 @@ public class Employee {
 
     public void addEmployee(){
         this.addEmployeeToFile();
-        employees[NumOfEmployees+1] = this;
+        employees[NumOfEmployees] = this;
         NumOfEmployees++;
     }
 
@@ -157,6 +157,7 @@ public class Employee {
                 else {
                     writer.append("false");
                 }
+                writer.newLine();
             }
             writer.close();
         }catch (IOException e){

@@ -20,12 +20,22 @@ public class app extends JFrame {
     private JLabel UserNameText;
     private JLabel StatusText;
     private JButton deleteTaskButton;
+    private JScrollBar scrollBar1;
+    private JList<String> assignmentList;
     private static Employee User = null;
 
 
 
     /// Setters & Getters
 
+
+    public void setUserNameText(String userNameText) {
+        UserNameText.setText(userNameText);
+    }
+
+    public void setStatusText(String statusText) {
+        StatusText.setText(statusText);
+    }
 
     public static void setUser(Employee user) {
         User = user;
@@ -40,6 +50,19 @@ public class app extends JFrame {
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+
+        DefaultListModel<String> l1 = new DefaultListModel<>();
+        l1.addElement("Item1");
+        l1.addElement("Item2");
+        l1.addElement("Item3");
+        l1.addElement("Item4");
+        String f = "fff";
+        assignmentList.setModel(l1);
+
+
+
 
         //setting manager
         Employee manager = new Employee(205662398,"Yotam",1111,true);
@@ -71,15 +94,7 @@ public class app extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                new LogInForm();
-                if(User != null){
-                    UserNameText.setText(User.getName());
-                    if(User.isManager())
-                    StatusText.setText("Manager");
-                    else{StatusText.setText("Employee");};
-                }
-
-
+                new LogInForm(app.this);
 
             }
         });

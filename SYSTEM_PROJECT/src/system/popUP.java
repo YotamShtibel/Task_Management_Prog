@@ -1,10 +1,13 @@
 package system;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class popUP extends JFrame{
     private JPanel popPanel;
     private JLabel Message;
+    private JButton exitButton;
 
     public popUP(){
         //Creating Frame
@@ -12,6 +15,9 @@ public class popUP extends JFrame{
         this.setSize(400,300);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+
+
+
 
     }
 
@@ -22,6 +28,16 @@ public class popUP extends JFrame{
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         Message.setText(message);
+
+
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                dispose();
+
+            }
+        });
 
     }
 }

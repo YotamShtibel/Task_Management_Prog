@@ -35,8 +35,12 @@ public class AddEmployeeForm extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 Employee tempEmployee = new Employee(Integer.parseInt(textField2.getText()),textField1.getText(),Integer.parseInt(textField3.getText()),checkBox1.isSelected());
-                tempEmployee.addEmployeeToFile();
-                dispose();
+                if(Employee.searchEmployee(tempEmployee.getId()).getId() != 0)
+                    new popUP("User already exist");
+                else {
+                    tempEmployee.addEmployee();
+                    dispose();
+                }
 
             }
         });

@@ -17,7 +17,7 @@ public class Assignment {
     private LocalTime madeTime;
     private LocalDate madeDate;
     private Employee assignedTo;
-    private int priority; // 1 - low priority ... 3 - High priority
+    private int priority = 1; // 1 - low priority ... 3 - High priority
     private String title;
     private String context;
     private static Assignment[] assignments = setAssignmentsInFunc();
@@ -134,7 +134,6 @@ public class Assignment {
             writer.append(this.getTitle());
             writer.newLine();
             writer.append(this.getContext());
-            writer.newLine();
             writer.close();
 
         }catch (IOException e){
@@ -145,7 +144,7 @@ public class Assignment {
 
     public void addAssignment(){
         this.addAssignmentToFile();
-        assignments[NumOfAssignments+1] = this;
+        assignments[NumOfAssignments] = this;
         NumOfAssignments++;
     }
 
@@ -153,8 +152,8 @@ public class Assignment {
 
         for(int i = 0 ;i < NumOfAssignments ; i++){
             if (assignments[i].getAssignmentNum() == numOfAssignment) {
-                for (int j = i; j <NumOfAssignments; j++)
-                    assignments[i] = assignments[j];
+                for (int j = i , k = 0; j <NumOfAssignments; j++ , k++)
+                    assignments[i + k] = assignments[j+1];
                 NumOfAssignments--;
             }
         }
@@ -165,9 +164,8 @@ public class Assignment {
 
         try{
 
-            BufferedWriter writer = new BufferedWriter(new FileWriter("Assignments_Data.txt",false));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("Assignments_Data.txt"));
             for (int i = 0 ; i < NumOfAssignments ; i++) {
-
 
                 writer.append(Integer.toString(assignments[i].getAssignmentNum()));
                 writer.newLine();
@@ -182,9 +180,9 @@ public class Assignment {
                 writer.append(assignments[i].getTitle());
                 writer.newLine();
                 writer.append(assignments[i].getContext());
-                writer.newLine();
-                writer.close();
+
             }
+            writer.close();
         }catch (IOException e){
             System.out.println("error occurred in Assignment/refreshData");
 

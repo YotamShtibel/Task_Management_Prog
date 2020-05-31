@@ -15,7 +15,7 @@ public class LogInForm extends JFrame{
     private JLabel incorrectMessage;
 
 
-    public LogInForm(){
+    public LogInForm(app ap){
         //Creating Frame
         this.add(LogInPanel);
         this.setSize(450,350);
@@ -45,6 +45,10 @@ public class LogInForm extends JFrame{
                             incorrectMessage.setVisible(true);
                         }else {
                             app.setUser(employee);
+                            ap.setUserNameText(employee.getName());
+                                if(employee.isManager())
+                                    ap.setStatusText("Manager");
+                                else{ap.setStatusText("Employee");};
                             dispose();
                         }
                     }
