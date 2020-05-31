@@ -180,8 +180,11 @@ public class Assignment {
                 writer.append(assignments[i].getTitle());
                 writer.newLine();
                 writer.append(assignments[i].getContext());
+                if(i+1 < NumOfAssignments)
+                writer.newLine();
 
             }
+
             writer.close();
         }catch (IOException e){
             System.out.println("error occurred in Assignment/refreshData");
@@ -209,11 +212,11 @@ public class Assignment {
 
     }
 
-    public int getNextAssignmentNum(){
+    public static int getNextAssignmentNum(){
         int highestNum=1;
         for(int i = 0 ; i < NumOfAssignments ; i++) {
-            if (assignments[i].getAssignmentNum() > highestNum)
-                highestNum = assignments[i].getNextAssignmentNum() + 1;
+            if (assignments[i].getAssignmentNum() >= highestNum)
+                highestNum = assignments[i].getAssignmentNum() + 1;
         }
         return highestNum;
         }

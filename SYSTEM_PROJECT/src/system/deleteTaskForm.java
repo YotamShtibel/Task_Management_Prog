@@ -12,7 +12,7 @@ public class deleteTaskForm extends JFrame {
     private JLabel Message;
     private JPanel MainDeleteTaskPanel;
 
-    public deleteTaskForm() {
+    public deleteTaskForm(app ap) {
         //Creating Frame
         this.add(MainDeleteTaskPanel);
         this.setSize(400, 300);
@@ -42,6 +42,7 @@ public class deleteTaskForm extends JFrame {
                             Message.setVisible(true);
                         }else{
                             Assignment.removeAssignment(assignment.getAssignmentNum());
+                            ap.setAssignmentList();
                             dispose();
                         }
                     }else {
@@ -52,6 +53,7 @@ public class deleteTaskForm extends JFrame {
                                     Message.setVisible(true);
                                 }else{
                                     Assignment.removeAssignment(assignment.getAssignmentNum());
+                                    ap.setAssignmentList();
                                     dispose();
                                 }
                             }

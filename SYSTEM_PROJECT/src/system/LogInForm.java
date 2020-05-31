@@ -45,6 +45,7 @@ public class LogInForm extends JFrame{
                             incorrectMessage.setVisible(true);
                         }else {
                             app.setUser(employee);
+                            ap.setAssignmentList();
                             ap.setUserNameText(employee.getName());
                                 if(employee.isManager())
                                     ap.setStatusText("Manager");

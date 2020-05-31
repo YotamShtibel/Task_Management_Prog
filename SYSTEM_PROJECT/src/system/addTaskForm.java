@@ -19,7 +19,7 @@ public class addTaskForm extends JFrame{
     private JRadioButton highRadioButton;
 
 
-    public addTaskForm() {
+    public addTaskForm(app ap) {
         //Creating Frame
         this.add(assignmentPanel);
         this.setSize(400, 300);
@@ -64,8 +64,9 @@ public class addTaskForm extends JFrame{
                    priority = 2;
                if(highRadioButton.isSelected())
                    priority = 3;
-               Assignment assignment = new Assignment(Assignment.getNumOfAssignments(), LocalTime.now(), LocalDate.now(),employee,priority, title, context);
+               Assignment assignment = new Assignment(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(),employee,priority, title, context);
                assignment.addAssignment();
+               ap.setAssignmentList();
                dispose();
 
             }

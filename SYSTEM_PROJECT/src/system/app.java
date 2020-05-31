@@ -37,9 +37,28 @@ public class app extends JFrame {
         StatusText.setText(statusText);
     }
 
+    public void setAssignmentList() {
+        assignmentList.setModel(setElementsToLIstInFunc(Assignment.getAssignments())); //setting AssignmentList with current assignments
+    }
+
     public static void setUser(Employee user) {
         User = user;
 
+    }
+
+    ////////////////////////////////
+
+    //Functions
+
+    private DefaultListModel<String> setElementsToLIstInFunc (Assignment[] assignments){
+
+        DefaultListModel<String> l1 = new DefaultListModel<>();
+
+        for(int i= 0 ; i < Assignment.getNumOfAssignments() ; i++){
+            if (assignments[i].getAssignedTo() == User)
+                l1.addElement(Integer.toString(assignments[i].getAssignmentNum()) + " | " + assignments[i].getTitle());
+        }
+        return l1;
     }
 
     public app(){
@@ -52,18 +71,6 @@ public class app extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-
-        DefaultListModel<String> l1 = new DefaultListModel<>();
-        l1.addElement("Item1");
-        l1.addElement("Item2");
-        l1.addElement("Item3");
-        l1.addElement("Item4");
-        String f = "fff";
-        assignmentList.setModel(l1);
-
-
-
-
         //setting manager
         Employee manager = new Employee(205662398,"Yotam",1111,true);
         if (Employee.searchEmployee(205662398).getId() != 205662398)
@@ -73,6 +80,8 @@ public class app extends JFrame {
         Employee[] employees = Employee.getEmployees();
         for(int i = 0 ; i < Employee.getNumOfEmployees() ; i++)
             employeeBox.addItem(employees[i].getName());
+
+
 
 
         // Add_Employee Button Listener
@@ -96,6 +105,7 @@ public class app extends JFrame {
 
                 new LogInForm(app.this);
 
+
             }
         });
 
@@ -117,7 +127,9 @@ public class app extends JFrame {
         addTaskButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new addTaskForm();
+
+                new addTaskForm(app.this);
+
             }
         });
 
@@ -126,7 +138,7 @@ public class app extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                new deleteTaskForm();
+                new deleteTaskForm(app.this);
 
             }
         });
