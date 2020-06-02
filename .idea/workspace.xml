@@ -20,29 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b35a86d-b3b1-4f33-8ebc-9ac9fa659bdb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/makeReminderForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/makeReminderForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignments_Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignments_Data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employees_Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Employees_Data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Assignment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/LogInForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/LogInForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Reminder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Reminder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/addTaskForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/addTaskForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/addTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/addTaskForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/app.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/app.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/app.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/app.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Assignment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Assignment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/LogInForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/LogInForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +94,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590872567444">
@@ -130,22 +113,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591031687050" />
-    <state width="1638" height="332" key="GridCell.Tab.0.bottom" timestamp="1591031698306">
+    <state width="1638" height="264" key="GridCell.Tab.0.bottom" timestamp="1591120108336">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591031698306" />
-    <state width="1638" height="332" key="GridCell.Tab.0.center" timestamp="1591031698306">
+    <state width="1638" height="264" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591120108336" />
+    <state width="1638" height="264" key="GridCell.Tab.0.center" timestamp="1591120108336">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.0.center/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591031698306" />
-    <state width="1638" height="332" key="GridCell.Tab.0.left" timestamp="1591031698306">
+    <state width="1638" height="264" key="GridCell.Tab.0.center/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591120108336" />
+    <state width="1638" height="264" key="GridCell.Tab.0.left" timestamp="1591120108336">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.0.left/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591031698306" />
-    <state width="1638" height="332" key="GridCell.Tab.0.right" timestamp="1591031698306">
+    <state width="1638" height="264" key="GridCell.Tab.0.left/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591120108336" />
+    <state width="1638" height="264" key="GridCell.Tab.0.right" timestamp="1591120108336">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.0.right/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591031698306" />
+    <state width="1638" height="264" key="GridCell.Tab.0.right/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591120108336" />
     <state width="1638" height="332" key="GridCell.Tab.1.bottom" timestamp="1591031698307">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

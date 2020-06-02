@@ -75,7 +75,11 @@ public class addTaskForm extends JFrame{
                    priority = 2;
                if(highRadioButton.isSelected())
                    priority = 3;
-               Assignment assignment = new Reminder(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(),employee,priority, title, context, dateOfReminder,timeOfReminder);
+                Assignment assignment;
+               if(makeAReminderCheckBox.isSelected())
+                assignment = new Reminder(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(),employee,priority, title, context, dateOfReminder,timeOfReminder);
+               else
+                   assignment = new Assignment(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(),employee,priority, title, context);
                assignment.addAssignment();
                ap.setAssignmentList();
                dispose();
