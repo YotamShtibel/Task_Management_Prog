@@ -10,12 +10,7 @@ true
 yyerty
 3
 false
-
 123
 Michal
 123
-false
-33
-Nofar
-3
 false
