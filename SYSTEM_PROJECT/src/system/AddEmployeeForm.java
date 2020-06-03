@@ -13,7 +13,7 @@ public class AddEmployeeForm extends JFrame {
     private JTextField textField2;
     private JTextField textField3;
 
-    public AddEmployeeForm(){
+    public AddEmployeeForm(app ap){
 
         //Creating Frame
         this.add(MainAddPanel);
@@ -39,6 +39,7 @@ public class AddEmployeeForm extends JFrame {
                     new popUP("User already exist");
                 else {
                     tempEmployee.addEmployee();
+                    ap.refreshEmployeeBox();
                     dispose();
                 }
 

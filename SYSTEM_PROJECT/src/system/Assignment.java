@@ -4,14 +4,15 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
+
+
 public class Assignment {
-    public final DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("HH:mm:ss");
+    public final static DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("HH:mm:ss");
     private static int NumOfAssignments = 0;
     private int assignmentNum;
     private LocalTime madeTime;
@@ -58,6 +59,18 @@ public class Assignment {
 
     public String getContext() {
         return context;
+    }
+
+    public void setAssignedTo(Employee assignedTo) {
+        this.assignedTo = assignedTo;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
     }
 
     //////////////////
@@ -222,5 +235,6 @@ public class Assignment {
         }
 
 
-
 }
+
+

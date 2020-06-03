@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 1
 19:18:28.947
 2020-05-31
@@ -19,3 +20,19 @@ Yotam
 2
 sdfsdf
 sdfsdf
+=======
+2
+19:37:12.455
+2020-06-03
+Yotam
+1
+Task number 2
+.
+3
+19:41:03.927
+2020-06-03
+Yotam
+3
+shirlyyyyyyyy
+sex bomb
+>>>>>>> Stashed changes

@@ -3,10 +3,15 @@ package system;
 import com.sun.tools.javac.Main;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.text.PasswordView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.io.*;
+import java.util.List;
 
 
 public class app extends JFrame {
@@ -20,7 +25,10 @@ public class app extends JFrame {
     private JLabel UserNameText;
     private JLabel StatusText;
     private JButton deleteTaskButton;
+<<<<<<< Updated upstream
     private JScrollBar scrollBar1;
+=======
+>>>>>>> Stashed changes
     private JList<String> assignmentList;
     private static Employee User = null;
 
@@ -28,6 +36,10 @@ public class app extends JFrame {
 
     /// Setters & Getters
 
+
+    public static Employee getUser() {
+        return User;
+    }
 
     public void setUserNameText(String userNameText) {
         UserNameText.setText(userNameText);
@@ -61,6 +73,17 @@ public class app extends JFrame {
         return l1;
     }
 
+    public void refreshEmployeeBox(){
+
+        employeeBox.removeAllItems();
+
+        Employee[] employees = Employee.getEmployees();
+        employeeBox.addItem(null);
+        for(int i = 0 ; i < Employee.getNumOfEmployees() ; i++)
+            employeeBox.addItem(employees[i].getName());
+
+    }
+
     public app(){
 
         // Frame Properties
@@ -76,10 +99,15 @@ public class app extends JFrame {
         if (Employee.searchEmployee(205662398).getId() != 205662398)
             manager.addEmployee();
 
+<<<<<<< Updated upstream
         //setting employBox
         Employee[] employees = Employee.getEmployees();
         for(int i = 0 ; i < Employee.getNumOfEmployees() ; i++)
             employeeBox.addItem(employees[i].getName());
+=======
+        refreshEmployeeBox();//setting employBox
+
+>>>>>>> Stashed changes
 
 
 
@@ -93,7 +121,7 @@ public class app extends JFrame {
                     new popUP("Must log-in first");
                 else{if(!User.isManager()){
                     new popUP("Only mannager can enter!");}
-                else{new AddEmployeeForm();}}
+                else{new AddEmployeeForm(app.this);}}
 
 }
         });
@@ -128,7 +156,10 @@ public class app extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                new addTaskForm(app.this);
+                if(User == null)
+                    new popUP("Must log-in first!");
+                else
+                    new addTaskForm(app.this);
 
             }
         });
@@ -138,10 +169,61 @@ public class app extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                new deleteTaskForm(app.this);
+                if (User == null)
+                    new popUP("Must log-in first");
+                else{if(!User.isManager()){
+                    new popUP("Only manager can enter!");}
+                else{new deleteTaskForm(app.this);}}
 
             }
         });
+<<<<<<< Updated upstream
+=======
+
+        //employeeBox Listener
+        employeeBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                if (User == null) {
+                    new popUP("Must log-in first");
+                    employeeBox.setSelectedIndex(0);
+                }else {
+                    if (!User.isManager()) {
+                        new popUP("Only manager can access");
+                        employeeBox.setSelectedIndex(0);
+                    }
+                }
+
+                setAssignmentList();
+
+
+            }
+        });
+
+
+        assignmentList.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+
+                if(!assignmentList.isSelectionEmpty()){
+
+                if( !e.getValueIsAdjusting()){
+                    String selectedAssignmentName = assignmentList.getSelectedValue();
+                    String first2Chars = selectedAssignmentName.substring(0, 2);//substring containing first 2 characters
+                    String numOnly = first2Chars.replaceAll("[^0-9]", "");
+                    int numAssignment = Integer.parseInt(numOnly);
+                    Assignment selectedAssignment = Assignment.searchAssignment(numAssignment);
+
+                    new AssignmentDetails(app.this, selectedAssignment);
+
+
+                }}
+
+
+            }
+        });
+>>>>>>> Stashed changes
     }
 
     public static void main(String[] args) {
