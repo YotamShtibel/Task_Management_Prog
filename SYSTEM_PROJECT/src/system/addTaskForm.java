@@ -17,7 +17,17 @@ public class addTaskForm extends JFrame{
     private JRadioButton lowRadioButton;
     private JRadioButton mediumRadioButton;
     private JRadioButton highRadioButton;
+    private JCheckBox makeAReminderCheckBox;
+    private LocalTime timeOfReminder;
+    private LocalDate dateOfReminder;
 
+    public void setTimeOfReminder(LocalTime timeOfReminder) {
+        this.timeOfReminder = timeOfReminder;
+    }
+
+    public void setDateOfReminder(LocalDate dateOfReminder) {
+        this.dateOfReminder = dateOfReminder;
+    }
 
     public addTaskForm(app ap) {
         //Creating Frame
@@ -28,6 +38,7 @@ public class addTaskForm extends JFrame{
 
         //setting assignmentBox
         Employee[] employees = Employee.getEmployees();
+        assignedBox.addItem(null);
         for(int i = 0 ; i < Employee.getNumOfEmployees() ; i++)
             assignedBox.addItem(employees[i].getName());
 
@@ -65,7 +76,11 @@ public class addTaskForm extends JFrame{
                    priority = 2;
                if(highRadioButton.isSelected())
                    priority = 3;
-               Assignment assignment = new Assignment(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(),employee,priority, title, context);
+                Assignment assignment;
+               if(makeAReminderCheckBox.isSelected())
+                assignment = new Reminder(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(),employee,priority, title, context, dateOfReminder,timeOfReminder);
+               else
+                   assignment = new Assignment(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(),employee,priority, title, context);
                assignment.addAssignment();
                ap.setAssignmentList();
                dispose();
@@ -98,6 +113,16 @@ public class addTaskForm extends JFrame{
                 else
                     new popUP("Only Manager can assign tasks to other people");
 >>>>>>> Stashed changes
+            }
+        });
+
+        //reminder checkBox listener
+        makeAReminderCheckBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                new makeReminderForm(addTaskForm.this);
+
             }
         });
     }

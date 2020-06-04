@@ -83,8 +83,16 @@ public class Assignment {
         this.assignedTo = assignTo;
         this.madeTime = madeTime;
         this.madeDate = madeDate;
-        this.context = context;
-        this.title = title;
+        if(context.isEmpty())
+            this.context = ".";
+        else
+            this.context = context;
+        if(context.isEmpty()) {
+            String str = "Task number " + assignmentNum;
+            this.title = str;
+        }
+        else
+            this.title = title;
     }
 
     public void printAssignment() {
@@ -110,10 +118,12 @@ public class Assignment {
                 int tempAssignmentNum = Integer.parseInt(x.next());
                 LocalTime tempTime = LocalTime.parse(x.next());
                 LocalDate tempDate = LocalDate.parse(x.next());
-                String tempEmployeeName = x.next();
+                String tempEmployeeName = x.nextLine();
+                tempEmployeeName = x.nextLine();
                 int tempPriority = Integer.parseInt(x.next());
-                String tempTitle = x.next();
-                String tempContext = x.next();
+                String tempTitle = x.nextLine();
+                tempTitle = x.nextLine();
+                String tempContext = x.nextLine();
 
                 Assignment tempAssignment = new Assignment(tempAssignmentNum, tempTime, tempDate,Employee.searchEmployee(tempEmployeeName),tempPriority,tempTitle,tempContext);
                 assignments[NumOfAssignments] = tempAssignment;

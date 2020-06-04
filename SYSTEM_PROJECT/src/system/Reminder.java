@@ -1,16 +1,9 @@
 package system;
 
 import java.time.LocalDate;
-<<<<<<< Updated upstream
-
-public class Reminder extends Assignment{
-    private LocalDate endDate;
-
-    public Reminder(LocalDate endDate) {
-        this.endDate = endDate;
-=======
 import java.time.LocalTime;
 import java.util.Timer;
+import java.util.TimerTask;
 
 public class Reminder extends Assignment {
     private LocalDate reminderDate;
@@ -20,18 +13,14 @@ public class Reminder extends Assignment {
         super(assignmentNum, madeTime, madeDate, assignTo, priority, title, context);
         this.reminderDate = reminderDate;
         this.reminderTime = reminderTime;
-        int delay = (((reminderTime.getHour() - LocalTime.now().getHour()) * 60) + ((reminderTime.getMinute() - LocalTime.now().getMinute()))) * 1000 * 60;
-       setAlarm(assignmentNum,delay);
-
-
-    }
-
-    public void setAlarm(int assignmentNum, int delay){
         Alarm alarm = new Alarm(assignmentNum);
         Timer timer = new Timer();
+        long delay = (((reminderTime.getHour() - LocalTime.now().getHour()) * 60) + ((reminderTime.getMinute() - LocalTime.now().getMinute()))) * 1000 * 60;
         timer.schedule(alarm, delay);
->>>>>>> Stashed changes
+
+
     }
+
 
 
 }
