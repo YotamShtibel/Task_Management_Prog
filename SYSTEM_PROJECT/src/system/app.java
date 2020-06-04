@@ -1,18 +1,15 @@
 package system;
 
-import com.sun.tools.javac.Main;
-
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import javax.swing.text.PasswordView;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
 import java.io.*;
-import java.util.List;
-
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class app extends JFrame {
     private JComboBox employeeBox;
@@ -25,13 +22,10 @@ public class app extends JFrame {
     private JLabel UserNameText;
     private JLabel StatusText;
     private JButton deleteTaskButton;
-<<<<<<< Updated upstream
-    private JScrollBar scrollBar1;
-=======
->>>>>>> Stashed changes
     private JList<String> assignmentList;
+    private JList<String> generalAssignmentsList;
+    private JList<String> chooseEmployeeAssignmentsList;
     private static Employee User = null;
-
 
 
     /// Setters & Getters
@@ -50,7 +44,18 @@ public class app extends JFrame {
     }
 
     public void setAssignmentList() {
-        assignmentList.setModel(setElementsToLIstInFunc(Assignment.getAssignments())); //setting AssignmentList with current assignments
+
+        if (User != null)
+            assignmentList.setModel(setElementsToLIstInFunc
+                    (Assignment.getAssignments(), User.getName())); //setting AssignmentList with current assignments to current employee
+
+        generalAssignmentsList.setModel(setElementsToLIstInFunc
+                (Assignment.getAssignments(), "no employee")); //setting AssignmentList with no employee-assigned Assignments
+
+        chooseEmployeeAssignmentsList.setModel(setElementsToLIstInFunc
+                (Assignment.getAssignments(), (String) employeeBox.getSelectedItem())); //setting AssignmentList with no employee-assigned Assignments
+
+
     }
 
     public static void setUser(Employee user) {
@@ -58,19 +63,40 @@ public class app extends JFrame {
 
     }
 
-    ////////////////////////////////
+    //////////////////////////////////////////////////
 
     //Functions
 
-    private DefaultListModel<String> setElementsToLIstInFunc (Assignment[] assignments){
+    private DefaultListModel<String> setElementsToLIstInFunc(Assignment[] assignments, String userName) {
 
         DefaultListModel<String> l1 = new DefaultListModel<>();
-
-        for(int i= 0 ; i < Assignment.getNumOfAssignments() ; i++){
-            if (assignments[i].getAssignedTo() == User)
-                l1.addElement(Integer.toString(assignments[i].getAssignmentNum()) + " | " + assignments[i].getTitle());
+        for (int i = 0; i < Assignment.getNumOfAssignments(); i++) {
+            if (assignments[i].getAssignedTo().getName() == userName) {
+                if (assignments[i].getPriority() == 1)
+                    l1.addElement(Integer.toString(assignments[i].getAssignmentNum()) + " | " + assignments[i].getTitle()
+                            + " | " + "Low Priority");
+                else {
+                    if (assignments[i].getPriority() == 2)
+                        l1.addElement(Integer.toString(assignments[i].getAssignmentNum()) + " | " + assignments[i].getTitle()
+                                + " | " + "Medium Priority");
+                    else
+                        l1.addElement(Integer.toString(assignments[i].getAssignmentNum()) + " | " + assignments[i].getTitle()
+                                + " | " + "High Priority");
+                }
+            }
         }
         return l1;
+    }
+
+    private Assignment getListenerData(JList<String> list) {
+
+        String selectedAssignmentName = list.getSelectedValue();
+        String first2Chars = selectedAssignmentName.substring(0, 2);//substring containing first 2 characters
+        String numOnly = first2Chars.replaceAll("[^0-9]", "");
+        int numAssignment = Integer.parseInt(numOnly);
+        Assignment selectedAssignment = Assignment.searchAssignment(numAssignment);
+        return selectedAssignment;
+
     }
 
     public void refreshEmployeeBox(){
@@ -84,11 +110,15 @@ public class app extends JFrame {
 
     }
 
+    //////////////////////////////////////////////////////
+
+
+
     public app(){
 
         // Frame Properties
         this.add(MainPanel);
-        this.setSize(800,600);
+        this.setSize(1280,720);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -99,17 +129,95 @@ public class app extends JFrame {
         if (Employee.searchEmployee(205662398).getId() != 205662398)
             manager.addEmployee();
 
-<<<<<<< Updated upstream
+
         //setting employBox
         Employee[] employees = Employee.getEmployees();
         for(int i = 0 ; i < Employee.getNumOfEmployees() ; i++)
             employeeBox.addItem(employees[i].getName());
-=======
         refreshEmployeeBox();//setting employBox
 
->>>>>>> Stashed changes
+        //setting Lists
+        setAssignmentList();
 
 
+        //setting Lists Helping Functions
+        generalAssignmentsList.setCellRenderer(new DefaultListCellRenderer() {
+
+            @Override
+            public Component getListCellRendererComponent(JList list, Object value, int index,
+                                                          boolean isSelected, boolean cellHasFocus) {
+                Component c = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+                if (value instanceof String && !((String)value).isEmpty()) {
+                    Assignment assignment;
+                    int assignmentNum;
+                    for(int i = 0 ; i < generalAssignmentsList.getComponents().length && !((String)value).isEmpty() ; i++){
+                        String first2Chars = ((String)value).substring(0, 2);//substring containing first 2 characters
+                        String numOnly = first2Chars.replaceAll("[^0-9]", "");
+                        int numAssignment = Integer.parseInt(numOnly);
+                        assignment = Assignment.searchAssignment(numAssignment);
+                        if (assignment.getStatus() == 3) {
+                            setBackground(Color.GREEN);
+                        } else { if(assignment.getStatus() == 2)
+                            setBackground(Color.cyan);
+                        else{
+                            setBackground(Color.white);}
+                } }}
+                return c;
+            }
+
+        });
+
+        assignmentList.setCellRenderer(new DefaultListCellRenderer() {
+
+            @Override
+            public Component getListCellRendererComponent(JList list, Object value, int index,
+                                                          boolean isSelected, boolean cellHasFocus) {
+                Component c = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+                if (value instanceof String && !((String)value).isEmpty()) {
+                    Assignment assignment;
+                    int assignmentNum;
+                    for(int i = 0 ; i < assignmentList.getComponents().length && !((String)value).isEmpty() ; i++){
+                        String first2Chars = ((String)value).substring(0, 2);//substring containing first 2 characters
+                        String numOnly = first2Chars.replaceAll("[^0-9]", "");
+                        int numAssignment = Integer.parseInt(numOnly);
+                        assignment = Assignment.searchAssignment(numAssignment);
+                        if (assignment.getStatus() == 3) {
+                            setBackground(Color.GREEN);
+                        } else { if(assignment.getStatus() == 2)
+                            setBackground(Color.cyan);
+                        else{
+                            setBackground(Color.white);}
+                        } }}
+                return c;
+            }
+
+        });
+
+        chooseEmployeeAssignmentsList.setCellRenderer(new DefaultListCellRenderer() {
+
+            @Override
+            public Component getListCellRendererComponent(JList list, Object value, int index,
+                                                          boolean isSelected, boolean cellHasFocus) {
+                Component c = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+                if (value instanceof String && !((String)value).isEmpty()) {
+                    Assignment assignment;
+                    int assignmentNum;
+                    for(int i = 0 ; i < chooseEmployeeAssignmentsList.getComponents().length && !((String)value).isEmpty() ; i++){
+                        String first2Chars = ((String)value).substring(0, 2);//substring containing first 2 characters
+                        String numOnly = first2Chars.replaceAll("[^0-9]", "");
+                        int numAssignment = Integer.parseInt(numOnly);
+                        assignment = Assignment.searchAssignment(numAssignment);
+                        if (assignment.getStatus() == 3) {
+                            setBackground(Color.GREEN);
+                        } else { if(assignment.getStatus() == 2)
+                            setBackground(Color.cyan);
+                        else{
+                            setBackground(Color.white);}
+                        } }}
+                return c;
+            }
+
+        });
 
 
         // Add_Employee Button Listener
@@ -120,7 +228,7 @@ public class app extends JFrame {
                 if (User == null)
                     new popUP("Must log-in first");
                 else{if(!User.isManager()){
-                    new popUP("Only mannager can enter!");}
+                    new popUP("Only manager can enter!");}
                 else{new AddEmployeeForm(app.this);}}
 
 }
@@ -145,7 +253,7 @@ public class app extends JFrame {
                 if (User == null)
                     new popUP("Must log-in first");
                 else{if(!User.isManager()){
-                    new popUP("Only mannager can enter!");}
+                    new popUP("Only manager can enter!");}
                 else{new RemoveEmployee();}}
 
             }
@@ -177,8 +285,7 @@ public class app extends JFrame {
 
             }
         });
-<<<<<<< Updated upstream
-=======
+
 
         //employeeBox Listener
         employeeBox.addActionListener(new ActionListener() {
@@ -202,33 +309,69 @@ public class app extends JFrame {
         });
 
 
+        //MayAssignments List Listener
         assignmentList.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
 
                 if(!assignmentList.isSelectionEmpty()){
 
-                if( !e.getValueIsAdjusting()){
-                    String selectedAssignmentName = assignmentList.getSelectedValue();
-                    String first2Chars = selectedAssignmentName.substring(0, 2);//substring containing first 2 characters
-                    String numOnly = first2Chars.replaceAll("[^0-9]", "");
-                    int numAssignment = Integer.parseInt(numOnly);
-                    Assignment selectedAssignment = Assignment.searchAssignment(numAssignment);
+                    if( !e.getValueIsAdjusting()){
 
-                    new AssignmentDetails(app.this, selectedAssignment);
+                        new AssignmentDetails(app.this, getListenerData(assignmentList));
 
-
-                }}
+                    }
+                }
 
 
             }
         });
->>>>>>> Stashed changes
+
+        //GeneralAssignments List Listener
+        generalAssignmentsList.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+
+                if(!generalAssignmentsList.isSelectionEmpty()){
+
+                    if( !e.getValueIsAdjusting()){
+
+                        new AssignmentDetails(app.this, getListenerData(generalAssignmentsList));
+
+                    }
+                }
+
+
+            }
+        });
+
+        //ChooseEmployeeAssignments List Listener
+        chooseEmployeeAssignmentsList.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+
+                if(!chooseEmployeeAssignmentsList.isSelectionEmpty()){
+
+                    if( !e.getValueIsAdjusting()){
+
+                        new AssignmentDetails(app.this, getListenerData(chooseEmployeeAssignmentsList));
+
+
+                    }
+                }
+
+            }
+        });
+
+
+
+
     }
 
     public static void main(String[] args) {
         File employeesFile = new File("Employees_Data.txt");
         File AssignmentsFile = new File("Assignments_Data.txt");
+        
 
         if (!employeesFile.exists()){
             try{

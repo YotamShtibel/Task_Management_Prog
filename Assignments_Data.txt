@@ -1,38 +1,136 @@
-<<<<<<< Updated upstream
 1
-19:18:28.947
-2020-05-31
+17:41:04.714
+2020-06-04
 Yotam
-2
-mission one
-fgdfg
+1
 3
-19:20:02.771
-2020-05-31
-huihig
+Task number 1
+.
 2
-test
-
-5
-19:21:59.419
-2020-05-31
-Yotam
-2
-sdfsdf
-sdfsdf
-=======
-2
-19:37:12.455
-2020-06-03
+17:41:08.020
+2020-06-04
 Yotam
 1
+2
 Task number 2
 .
 3
-19:41:03.927
-2020-06-03
-Yotam
+17:41:22.172
+2020-06-04
+employee1
+1
 3
-shirlyyyyyyyy
-sex bomb
->>>>>>> Stashed changes
+Task number 3
+.
+4
+17:49:52.218
+2020-06-04
+employee1
+1
+1
+Task number 4
+.
+5
+17:49:58.156
+2020-06-04
+employee1
+1
+1
+Task number 5
+.
+6
+17:50:37.060
+2020-06-04
+employee1
+1
+2
+Task number 6
+.
+7
+17:50:39.868
+2020-06-04
+employee1
+1
+3
+Task number 7
+.
+8
+19:10:49.373
+2020-06-04
+Yotam
+1
+3
+Task number 8
+.
+9
+19:10:53.708
+2020-06-04
+Yotam
+1
+2
+Task number 9
+.
+10
+19:16:02.317
+2020-06-04
+Yotam
+1
+3
+Task number 10
+.
+11
+19:29:05.458
+2020-06-04
+no employee
+1
+2
+Task number 11
+.
+12
+20:26:39.545
+2020-06-04
+no employee
+1
+3
+Task number 12
+.
+13
+20:26:54.620
+2020-06-04
+no employee
+1
+1
+Task number 13
+.
+14
+20:39:49.513
+2020-06-04
+employee1
+1
+2
+Task number 14
+.
+15
+20:39:55.700
+2020-06-04
+no employee
+1
+3
+Task number 15
+.
+16
+20:39:56.804
+2020-06-04
+no employee
+1
+1
+Task number 16
+.
+17
+20:39:58.124
+2020-06-04
+no employee
+1
+1
+Task number 17
+.

@@ -3,22 +3,10 @@ Yotam
 1111
 true
 1
-employee
+employee1
 1
-<<<<<<< Updated upstream
+false
+2
+manager2
+2
 true
-3
-yyerty
-3
-false
-
-123
-Michal
-123
-false
-33
-Nofar
-3
-=======
->>>>>>> Stashed changes
-false

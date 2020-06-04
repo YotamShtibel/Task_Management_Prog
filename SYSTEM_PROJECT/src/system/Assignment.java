@@ -19,6 +19,7 @@ public class Assignment {
     private LocalDate madeDate;
     private Employee assignedTo;
     private int priority = 1; // 1 - low priority ... 3 - High priority
+    private int status;// 1 - Not done , 2 - In progress , 3 - Done
     private String title;
     private String context;
     private static Assignment[] assignments = setAssignmentsInFunc();
@@ -73,13 +74,22 @@ public class Assignment {
         this.context = context;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
     //////////////////
 
     public Assignment(){}
 
-    public Assignment(int assignmentNum, LocalTime madeTime, LocalDate madeDate, Employee assignTo,int priority, String title, String context) {
+    public Assignment(int assignmentNum, LocalTime madeTime, LocalDate madeDate, Employee assignTo,int priority,int status,  String title, String context) {
         this.assignmentNum = assignmentNum;
         this.priority = priority;
+        this.status = status;
         this.assignedTo = assignTo;
         this.madeTime = madeTime;
         this.madeDate = madeDate;
@@ -102,6 +112,7 @@ public class Assignment {
         System.out.println("Time: " + this.getMadeTime().format(myFormatObj));
         System.out.println("Assigned to: " + this.getAssignedTo().getName());
         System.out.println("Priority is: " + this.getPriority());
+        System.out.println("Status is: " + this.getStatus());
         System.out.println("Title:" + this.getTitle());
         System.out.println("Context: " + this.getContext());
 
@@ -121,11 +132,12 @@ public class Assignment {
                 String tempEmployeeName = x.nextLine();
                 tempEmployeeName = x.nextLine();
                 int tempPriority = Integer.parseInt(x.next());
+                int tempStatus = Integer.parseInt(x.next());
                 String tempTitle = x.nextLine();
                 tempTitle = x.nextLine();
                 String tempContext = x.nextLine();
 
-                Assignment tempAssignment = new Assignment(tempAssignmentNum, tempTime, tempDate,Employee.searchEmployee(tempEmployeeName),tempPriority,tempTitle,tempContext);
+                Assignment tempAssignment = new Assignment(tempAssignmentNum, tempTime, tempDate,Employee.searchEmployee(tempEmployeeName),tempPriority,tempStatus, tempTitle,tempContext);
                 assignments[NumOfAssignments] = tempAssignment;
                 NumOfAssignments++;
             }
@@ -153,6 +165,8 @@ public class Assignment {
             writer.append(this.getAssignedTo().getName());
             writer.newLine();
             writer.append(Integer.toString(this.getPriority()));
+            writer.newLine();
+            writer.append(Integer.toString(this.getStatus()));
             writer.newLine();
             writer.append(this.getTitle());
             writer.newLine();
@@ -199,6 +213,8 @@ public class Assignment {
                 writer.append(assignments[i].getAssignedTo().getName());
                 writer.newLine();
                 writer.append(Integer.toString(assignments[i].getPriority()));
+                writer.newLine();
+                writer.append(Integer.toString(assignments[i].getStatus()));
                 writer.newLine();
                 writer.append(assignments[i].getTitle());
                 writer.newLine();

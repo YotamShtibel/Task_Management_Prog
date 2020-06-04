@@ -63,11 +63,18 @@ public class AssignmentDetails extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                if(ap.getUser() != null){
                 if(ap.getUser().isManager()){
                     assignment.setAssignedTo(Employee.searchEmployee(((String) assignedToBox.getSelectedItem())));
                     assignment.setTitle(titleField.getText());
                     assignment.setContext(contextArea.getText());
-                }else
+                    if(notDoneRadioButton.isSelected())
+                        assignment.setStatus(1);
+                    else if(inProgressRadioButton.isSelected())
+                        assignment.setStatus(2);
+                    else if(doneRadioButton.isSelected())
+                        assignment.setStatus(3);
+                }}else
                     new popUP("Only manager can change that field");
 
                 ap.setAssignmentList();

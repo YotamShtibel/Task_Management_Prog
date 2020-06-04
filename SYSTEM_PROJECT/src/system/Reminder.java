@@ -9,8 +9,8 @@ public class Reminder extends Assignment {
     private LocalDate reminderDate;
     private LocalTime reminderTime;
 
-    public Reminder(int assignmentNum, LocalTime madeTime, LocalDate madeDate, Employee assignTo, int priority, String title, String context, LocalDate reminderDate, LocalTime reminderTime) {
-        super(assignmentNum, madeTime, madeDate, assignTo, priority, title, context);
+    public Reminder(int assignmentNum, LocalTime madeTime, LocalDate madeDate, Employee assignTo, int priority, int status,  String title, String context, LocalDate reminderDate, LocalTime reminderTime) {
+        super(assignmentNum, madeTime, madeDate, assignTo, priority, status,  title, context);
         this.reminderDate = reminderDate;
         this.reminderTime = reminderTime;
         Alarm alarm = new Alarm(assignmentNum);

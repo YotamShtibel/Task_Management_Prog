@@ -3,7 +3,6 @@ package system;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -64,32 +63,10 @@ public class addTaskForm extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-<<<<<<< Updated upstream
-               String name  = (String) assignedBox.getItemAt(assignedBox.getSelectedIndex());
-               Employee employee = Employee.searchEmployee(name);
-               String title = titleField.getText();
-               String context = contextField.getText();
-               int priority=1;
-               if(lowRadioButton.isSelected())
-                   priority = 1;
-               if(mediumRadioButton.isSelected())
-                   priority = 2;
-               if(highRadioButton.isSelected())
-                   priority = 3;
-                Assignment assignment;
-               if(makeAReminderCheckBox.isSelected())
-                assignment = new Reminder(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(),employee,priority, title, context, dateOfReminder,timeOfReminder);
-               else
-                   assignment = new Assignment(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(),employee,priority, title, context);
-               assignment.addAssignment();
-               ap.setAssignmentList();
-               dispose();
+                if (ap.getUser().isManager() || ap.getUser().getName().equalsIgnoreCase(((String) assignedBox.getSelectedItem()))) {
 
-=======
-                String name  = (String) assignedBox.getItemAt(assignedBox.getSelectedIndex());
 
-                if(ap.getUser().getName().equalsIgnoreCase(name) || ap.getUser().isManager()) {
-
+                    String name = (String) assignedBox.getItemAt(assignedBox.getSelectedIndex());
                     Employee employee = Employee.searchEmployee(name);
                     String title = titleField.getText();
                     String context = contextField.getText();
@@ -102,17 +79,17 @@ public class addTaskForm extends JFrame{
                         priority = 3;
                     Assignment assignment;
                     if (makeAReminderCheckBox.isSelected())
-                        assignment = new Reminder(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(), employee, priority, title, context, dateOfReminder, timeOfReminder);
+                        assignment = new Reminder(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(), employee, priority, 1,  title, context, dateOfReminder, timeOfReminder);
                     else
-                        assignment = new Assignment(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(), employee, priority, title, context);
+                        assignment = new Assignment(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(), employee, priority, 1,  title, context);
                     assignment.addAssignment();
                     ap.setAssignmentList();
                     dispose();
 
-                }
-                else
+
+                } else
                     new popUP("Only Manager can assign tasks to other people");
->>>>>>> Stashed changes
+
             }
         });
 
