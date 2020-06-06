@@ -97,7 +97,7 @@ public class Assignment {
             this.context = ".";
         else
             this.context = context;
-        if(context.isEmpty()) {
+        if(title.isEmpty()) {
             String str = "Task number " + assignmentNum;
             this.title = str;
         }
@@ -136,6 +136,8 @@ public class Assignment {
                 String tempTitle = x.nextLine();
                 tempTitle = x.nextLine();
                 String tempContext = x.nextLine();
+                while(!x.hasNextInt() && x.hasNext())
+                    tempContext = tempContext + '\n' + x.nextLine();
 
                 Assignment tempAssignment = new Assignment(tempAssignmentNum, tempTime, tempDate,Employee.searchEmployee(tempEmployeeName),tempPriority,tempStatus, tempTitle,tempContext);
                 assignments[NumOfAssignments] = tempAssignment;

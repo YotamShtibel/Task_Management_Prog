@@ -64,17 +64,23 @@ public class AssignmentDetails extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 if(ap.getUser() != null){
-                if(ap.getUser().isManager()){
-                    assignment.setAssignedTo(Employee.searchEmployee(((String) assignedToBox.getSelectedItem())));
-                    assignment.setTitle(titleField.getText());
-                    assignment.setContext(contextArea.getText());
-                    if(notDoneRadioButton.isSelected())
-                        assignment.setStatus(1);
-                    else if(inProgressRadioButton.isSelected())
-                        assignment.setStatus(2);
-                    else if(doneRadioButton.isSelected())
-                        assignment.setStatus(3);
-                }}else
+
+                    if(ap.getUser() == Employee.searchEmployee(((String) assignedToBox.getSelectedItem()))) { // User can change his own task status
+                        if (notDoneRadioButton.isSelected())
+                            assignment.setStatus(1);
+                        else if (inProgressRadioButton.isSelected())
+                            assignment.setStatus(2);
+                        else if (doneRadioButton.isSelected())
+                            assignment.setStatus(3);
+                        assignment.setAssignedTo(Employee.searchEmployee(((String) assignedToBox.getSelectedItem())));
+                    }
+
+
+                    if(ap.getUser().isManager()){
+                        assignment.setAssignedTo(Employee.searchEmployee(((String) assignedToBox.getSelectedItem())));
+                        assignment.setTitle(titleField.getText());
+                        assignment.setContext(contextArea.getText());
+                    }}else
                     new popUP("Only manager can change that field");
 
                 ap.setAssignmentList();
