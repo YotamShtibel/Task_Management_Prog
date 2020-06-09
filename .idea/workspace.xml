@@ -20,12 +20,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b35a86d-b3b1-4f33-8ebc-9ac9fa659bdb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Libraries.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/aaa.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignments_Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignments_Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees_Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Employees_Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Alarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Alarm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Assignment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/AssignmentDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/AssignmentDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/LogInForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/LogInForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Reminder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Reminder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/addTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/addTaskForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/app.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/app.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/deleteTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/deleteTaskForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/makeReminderForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/makeReminderForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/popUP.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/popUP.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/popUP.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/popUP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_Management_Prog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Task_Management_Prog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Alarm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Alarm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Assignment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Assignment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Reminder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Reminder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/deleteTaskForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/deleteTaskForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/popUP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/popUP.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,13 +81,18 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aaa" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Libraries" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="app" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -107,53 +144,61 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="294" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1590872567444" />
-    <state x="645" y="205" key="#com.intellij.ide.util.MemberChooser" timestamp="1591476501188">
+    <state x="1100" y="187" key="#com.intellij.ide.util.MemberChooser" timestamp="1591700656098">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="645" y="205" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591476501188" />
+    <state x="1100" y="187" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591700656098" />
     <state x="621" y="287" key="#com.intellij.uiDesigner.palette.ComponentItemDialog" timestamp="1591021889360">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="621" y="287" key="#com.intellij.uiDesigner.palette.ComponentItemDialog/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591021889360" />
-    <state x="620" y="259" key="FileChooserDialogImpl" timestamp="1591294342918">
+    <state x="620" y="259" key="FileChooserDialogImpl" timestamp="1591551612243">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591294342918" />
-    <state width="1638" height="332" key="GridCell.Tab.0.bottom" timestamp="1591479371919">
+    <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591551612243" />
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom" timestamp="1591702785409">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591479371919" />
-    <state width="1638" height="332" key="GridCell.Tab.0.center" timestamp="1591479371919">
+    <state width="1638" height="273" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591702785409" />
+    <state width="1878" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591544532016" />
+    <state width="1638" height="273" key="GridCell.Tab.0.center" timestamp="1591702785408">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.0.center/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591479371919" />
-    <state width="1638" height="332" key="GridCell.Tab.0.left" timestamp="1591479371918">
+    <state width="1638" height="273" key="GridCell.Tab.0.center/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591702785408" />
+    <state width="1878" height="273" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591544532016" />
+    <state width="1638" height="273" key="GridCell.Tab.0.left" timestamp="1591702785408">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.0.left/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591479371918" />
-    <state width="1638" height="332" key="GridCell.Tab.0.right" timestamp="1591479371919">
+    <state width="1638" height="273" key="GridCell.Tab.0.left/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591702785408" />
+    <state width="1878" height="273" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591544532015" />
+    <state width="1638" height="273" key="GridCell.Tab.0.right" timestamp="1591702785409">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.0.right/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591479371919" />
-    <state width="1638" height="332" key="GridCell.Tab.1.bottom" timestamp="1591479371919">
+    <state width="1638" height="273" key="GridCell.Tab.0.right/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591702785409" />
+    <state width="1878" height="273" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591544532016" />
+    <state width="1638" height="330" key="GridCell.Tab.1.bottom" timestamp="1591701015590">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.1.bottom/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591479371919" />
-    <state width="1638" height="332" key="GridCell.Tab.1.center" timestamp="1591479371919">
+    <state width="1638" height="330" key="GridCell.Tab.1.bottom/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591701015590" />
+    <state width="1638" height="330" key="GridCell.Tab.1.center" timestamp="1591701015590">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.1.center/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591479371919" />
-    <state width="1638" height="332" key="GridCell.Tab.1.left" timestamp="1591479371919">
+    <state width="1638" height="330" key="GridCell.Tab.1.center/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591701015590" />
+    <state width="1638" height="330" key="GridCell.Tab.1.left" timestamp="1591701015589">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.1.left/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591479371919" />
-    <state width="1638" height="332" key="GridCell.Tab.1.right" timestamp="1591479371919">
+    <state width="1638" height="330" key="GridCell.Tab.1.left/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591701015589" />
+    <state width="1638" height="330" key="GridCell.Tab.1.right" timestamp="1591701015590">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="332" key="GridCell.Tab.1.right/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591479371919" />
-    <state x="320" y="78" key="SettingsEditor" timestamp="1591294356535">
+    <state width="1638" height="330" key="GridCell.Tab.1.right/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591701015590" />
+    <state x="320" y="78" key="SettingsEditor" timestamp="1591551614531">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="320" y="78" key="SettingsEditor/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591294356535" />
+    <state x="320" y="78" key="SettingsEditor/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591551614531" />
+    <state x="558" y="396" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1591551161995">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="558" y="396" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1591551161995" />
   </component>
 </project>

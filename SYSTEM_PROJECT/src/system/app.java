@@ -1,15 +1,16 @@
 package system;
 
+import com.itextpdf.text.*;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.pdf.PdfWriter;
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ComponentAdapter;
+import java.awt.event.*;
 import java.io.*;
-import java.time.LocalDate;
-import java.time.LocalTime;
+
 
 public class app extends JFrame {
     private JComboBox employeeBox;
@@ -110,6 +111,78 @@ public class app extends JFrame {
 
     }
 
+    public void printSummeryPDF(){
+
+
+        Document document = new Document();
+        try {
+            PdfWriter.getInstance(document, new FileOutputStream("Summery.pdf"));
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        document.open();
+
+        //setting title
+        Font font = FontFactory.getFont(FontFactory.COURIER, 22, BaseColor.BLACK);
+        Chunk chunk = new Chunk("Task Summery:", font);
+        chunk.setUnderline(0,-2);
+        try {
+            document.add(chunk);
+            document.add(new Paragraph("\n"));
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        }
+        Employee[] employees = Employee.getEmployees();
+        Assignment[] assignments = Assignment.getAssignments();
+
+        for(int i = 0 ; i < Employee.getNumOfEmployees() ; i++){
+
+
+            font = FontFactory.getFont(FontFactory.COURIER, 18, BaseColor.BLACK);
+            chunk = new Chunk("\n" + employees[i].getName() + ":\n", font);
+
+            try {
+                document.add(chunk);
+            } catch (DocumentException e) {
+                e.printStackTrace();
+            }
+
+            for(int j = 0 ; j < Assignment.getNumOfAssignments() ; j++) {
+                if(assignments[j].getAssignedTo() == employees[i]) {
+                    String Task = " ";
+                    Task = Task + "  " + "Task number: " + assignments[j].getAssignmentNum() + " is ";
+                    if (assignments[j].getStatus() == 1) {
+                        Task = Task + "NOT DONE";
+                        font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.RED);
+                    }
+                    else if (assignments[j].getStatus() == 2) {
+                        Task = Task + "IN PROGRESS";
+                        font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.GRAY);
+                    }
+                    else {
+                        Task = Task + "DONE";
+                        font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.GREEN);
+                    }
+
+                    chunk = new Chunk(Task, font);
+
+                    try {
+                        document.add(chunk);
+                    } catch (DocumentException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            }
+
+        document.close();
+
+
+    }
+
     //////////////////////////////////////////////////////
 
 
@@ -121,7 +194,41 @@ public class app extends JFrame {
         this.setSize(1280,720);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        app.this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+
+
+        addWindowListener(new WindowAdapter()
+        {
+            @Override
+            public void windowClosing(WindowEvent e)
+            { //poping message when user hasn't done with tasks
+                if(User != null){
+                    int[] assignmentsNums = new int[Assignment.getNumOfAssignments()];
+                    int j = 0;
+                    for(int i = 0; i < Assignment.getNumOfAssignments() ; i++){
+                        Assignment[] assignments = Assignment.getAssignments();
+                        if(assignments[i].getAssignedTo() == User && assignments[i].getStatus() != 3){
+                            assignmentsNums[j] = i+1;
+                            j++;
+                        }
+                    }
+                    String output = "There is still assignments you have'nt finished: ";
+                    for(int i = 0 ; i < j ; i++){
+                        output = output  + assignmentsNums[i] + ' ';
+                    }
+                    if(j != 0) {
+                        new popUP(output);
+                    }
+                    else
+                        app.this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    printSummeryPDF();
+                }
+                e.getWindow().dispose();
+                printSummeryPDF();
+
+            }
+        });
 
 
         //setting manager
@@ -373,7 +480,8 @@ public class app extends JFrame {
     public static void main(String[] args) {
         File employeesFile = new File("Employees_Data.txt");
         File AssignmentsFile = new File("Assignments_Data.txt");
-        
+        File AlarmsFile = new File("Alarms_Data.txt");
+
 
         if (!employeesFile.exists()){
             try{
@@ -386,6 +494,14 @@ public class app extends JFrame {
         if (!AssignmentsFile.exists()){
             try{
                 AssignmentsFile.createNewFile();
+            }catch(IOException e){
+                new popUP("Fatal Error!");
+            }
+        }
+
+        if (!AlarmsFile.exists()){
+            try{
+                AlarmsFile.createNewFile();
             }catch(IOException e){
                 new popUP("Fatal Error!");
             }

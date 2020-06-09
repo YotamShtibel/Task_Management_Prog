@@ -84,7 +84,7 @@ public class addTaskForm extends JFrame{
                         assignment = new Reminder(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(), employee, priority, 1,  title, context, dateOfReminder, timeOfReminder);
                     else
                         assignment = new Assignment(Assignment.getNextAssignmentNum(), LocalTime.now(), LocalDate.now(), employee, priority, 1,  title, context);
-                    assignment.addAssignment();
+                    assignment.addTask();
                     ap.setAssignmentList();
                     dispose();
 

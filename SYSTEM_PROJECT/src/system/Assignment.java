@@ -181,13 +181,13 @@ public class Assignment {
         }
     }
 
-    public void addAssignment(){
+    public void addTask(){
         this.addAssignmentToFile();
         assignments[NumOfAssignments] = this;
         NumOfAssignments++;
     }
 
-    public static void removeAssignment(int numOfAssignment){
+    public static void removeTask(int numOfAssignment){
 
         for(int i = 0 ;i < NumOfAssignments ; i++){
             if (assignments[i].getAssignmentNum() == numOfAssignment) {

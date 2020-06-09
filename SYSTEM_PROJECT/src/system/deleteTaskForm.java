@@ -41,7 +41,7 @@ public class deleteTaskForm extends JFrame {
                             Message.setText("can't find task by number");
                             Message.setVisible(true);
                         }else{
-                            Assignment.removeAssignment(assignment.getAssignmentNum());
+                            Reminder.removeTask(assignment.getAssignmentNum());
                             ap.setAssignmentList();
                             dispose();
                         }
@@ -52,7 +52,7 @@ public class deleteTaskForm extends JFrame {
                                     Message.setText("can't find task by title");
                                     Message.setVisible(true);
                                 }else{
-                                    Assignment.removeAssignment(assignment.getAssignmentNum());
+                                    Reminder.removeTask(assignment.getAssignmentNum());
                                     ap.setAssignmentList();
                                     dispose();
                                 }

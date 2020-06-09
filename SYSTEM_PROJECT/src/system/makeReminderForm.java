@@ -4,8 +4,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Time;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -58,7 +60,9 @@ public class makeReminderForm extends JFrame {
                     origin.setTimeOfReminder(time.toLocalTime());
 
                     Date tempDate1 = (Date)dateSpinner.getValue();
-                    LocalDate date = LocalDate.of(tempDate1.getYear(),tempDate1.getMonth(),tempDate1.getDay());
+                    LocalDate date = Instant.ofEpochMilli(tempDate1.getTime()).atZone(ZoneId.systemDefault()).toLocalDate();;
+
+
                     origin.setDateOfReminder(date);
 
                     dispose();

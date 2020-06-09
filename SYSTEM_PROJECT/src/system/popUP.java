@@ -12,7 +12,7 @@ public class popUP extends JFrame{
     public popUP(){
         //Creating Frame
         this.add(popPanel);
-        this.setSize(400,300);
+        this.setSize(500,350);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
 
@@ -24,10 +24,11 @@ public class popUP extends JFrame{
     public popUP(String message){
         //Creating Frame
         this.add(popPanel);
-        this.setSize(400,300);
+        this.setSize(500,350);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         Message.setText(message);
+
 
 
         exitButton.addActionListener(new ActionListener() {
@@ -35,6 +36,7 @@ public class popUP extends JFrame{
             public void actionPerformed(ActionEvent e) {
 
                 dispose();
+
 
             }
         });

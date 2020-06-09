@@ -47,6 +47,7 @@ public class LogInForm extends JFrame{
                             app.setUser(employee);
                             ap.setAssignmentList();
                             ap.setUserNameText(employee.getName());
+                            Reminder.setAlarms();
                                 if(employee.isManager())
                                     ap.setStatusText("Manager");
                                 else{ap.setStatusText("Employee");};
