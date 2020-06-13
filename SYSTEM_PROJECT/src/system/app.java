@@ -154,11 +154,11 @@ public class app extends JFrame {
                 if(assignments[j].getAssignedTo() == employees[i]) {
                     String Task = " ";
                     Task = Task + "  " + "Task number: " + assignments[j].getAssignmentNum() + " is ";
-                    if (assignments[j].getStatus() == 1) {
+                    if (assignments[j].getStatus().status() == 1) {
                         Task = Task + "NOT DONE";
                         font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.RED);
                     }
-                    else if (assignments[j].getStatus() == 2) {
+                    else if (assignments[j].getStatus().status() == 2) {
                         Task = Task + "IN PROGRESS";
                         font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.GRAY);
                     }
@@ -208,7 +208,7 @@ public class app extends JFrame {
                     int j = 0;
                     for(int i = 0; i < Assignment.getNumOfAssignments() ; i++){
                         Assignment[] assignments = Assignment.getAssignments();
-                        if(assignments[i].getAssignedTo() == User && assignments[i].getStatus() != 3){
+                        if(assignments[i].getAssignedTo() == User && assignments[i].getStatus().status() != 3){
                             assignmentsNums[j] = i+1;
                             j++;
                         }
@@ -234,7 +234,7 @@ public class app extends JFrame {
         //setting manager
         Employee manager = new Employee(205662398,"Yotam",1111,true);
         if (Employee.searchEmployee(205662398).getId() != 205662398)
-            manager.addEmployee();
+            Employee.addEmployee(manager);
 
 
         //setting employBox
@@ -262,9 +262,9 @@ public class app extends JFrame {
                         String numOnly = first2Chars.replaceAll("[^0-9]", "");
                         int numAssignment = Integer.parseInt(numOnly);
                         assignment = Assignment.searchAssignment(numAssignment);
-                        if (assignment.getStatus() == 3) {
+                        if (assignment.getStatus().status() == 3) {
                             setBackground(Color.GREEN);
-                        } else { if(assignment.getStatus() == 2)
+                        } else { if(assignment.getStatus().status() == 2)
                             setBackground(Color.cyan);
                         else{
                             setBackground(Color.white);}
@@ -288,9 +288,9 @@ public class app extends JFrame {
                         String numOnly = first2Chars.replaceAll("[^0-9]", "");
                         int numAssignment = Integer.parseInt(numOnly);
                         assignment = Assignment.searchAssignment(numAssignment);
-                        if (assignment.getStatus() == 3) {
+                        if (assignment.getStatus().status() == 3) {
                             setBackground(Color.GREEN);
-                        } else { if(assignment.getStatus() == 2)
+                        } else { if(assignment.getStatus().status() == 2)
                             setBackground(Color.cyan);
                         else{
                             setBackground(Color.white);}
@@ -314,9 +314,9 @@ public class app extends JFrame {
                         String numOnly = first2Chars.replaceAll("[^0-9]", "");
                         int numAssignment = Integer.parseInt(numOnly);
                         assignment = Assignment.searchAssignment(numAssignment);
-                        if (assignment.getStatus() == 3) {
+                        if (assignment.getStatus().status() == 3) {
                             setBackground(Color.GREEN);
-                        } else { if(assignment.getStatus() == 2)
+                        } else { if(assignment.getStatus().status() == 2)
                             setBackground(Color.cyan);
                         else{
                             setBackground(Color.white);}
@@ -482,12 +482,11 @@ public class app extends JFrame {
         File AssignmentsFile = new File("Assignments_Data.txt");
         File AlarmsFile = new File("Alarms_Data.txt");
 
-
         if (!employeesFile.exists()){
             try{
                 employeesFile.createNewFile();
             }catch(IOException e){
-                new popUP("Fatal Error!");
+                new popUP("Fatal Error! can't create file");
             }
         }
 
@@ -495,7 +494,7 @@ public class app extends JFrame {
             try{
                 AssignmentsFile.createNewFile();
             }catch(IOException e){
-                new popUP("Fatal Error!");
+                new popUP("Fatal Error! can't create file");
             }
         }
 
@@ -503,17 +502,10 @@ public class app extends JFrame {
             try{
                 AlarmsFile.createNewFile();
             }catch(IOException e){
-                new popUP("Fatal Error!");
+                new popUP("Fatal Error! can't create file");
             }
         }
 
-        Assignment[] assignments = Assignment.getAssignments();
-        for(int i=0 ; i < (Assignment.getNumOfAssignments()) ; i++){
-
-            System.out.println("Assignment number " + (i+1) +" is:\n");
-            assignments[i].printAssignment();
-
-        }
         new app();
     }
 }

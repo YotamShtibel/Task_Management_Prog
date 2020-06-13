@@ -67,11 +67,11 @@ public class AssignmentDetails extends JFrame {
 
                     if(ap.getUser() == Employee.searchEmployee(((String) assignedToBox.getSelectedItem()))) { // User can change his own task status
                         if (notDoneRadioButton.isSelected())
-                            assignment.setStatus(1);
+                            assignment.setStatus(new NotDone());
                         else if (inProgressRadioButton.isSelected())
-                            assignment.setStatus(2);
+                            assignment.setStatus(new InProgress());
                         else if (doneRadioButton.isSelected())
-                            assignment.setStatus(3);
+                            assignment.setStatus(new Done());
                         assignment.setAssignedTo(Employee.searchEmployee(((String) assignedToBox.getSelectedItem())));
                     }
 

@@ -54,7 +54,7 @@ public class Reminder extends Assignment {
                 tempEmployeeName = x.nextLine();
 
                 long delay = (((tempTime.getHour() - LocalTime.now().getHour()) * 60) + ((tempTime.getMinute() - LocalTime.now().getMinute()))) * 1000 * 60;
-                if(tempDate == LocalDate.now() && delay<=0){
+                if((tempDate.isEqual(LocalDate.now())  && delay<=0) || (tempDate.isBefore(LocalDate.now()))){
                     removeTask(tempAssignmentNum, false);
                 }else
                   activateTimer(delay,tempDate, tempTime, Employee.searchEmployee(tempEmployeeName),tempAssignmentNum);

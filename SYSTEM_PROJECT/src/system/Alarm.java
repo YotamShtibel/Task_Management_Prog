@@ -18,32 +18,12 @@ public class Alarm extends TimerTask {
         return num;
     }
 
-    public void setNum(int num) {
-        this.num = num;
-    }
-
-    public String getString() {
-        return string;
-    }
-
-    public void setString(String string) {
-        this.string = string;
-    }
-
     public LocalDate getReminderDate() {
         return reminderDate;
     }
 
-    public void setReminderDate(LocalDate reminderDate) {
-        this.reminderDate = reminderDate;
-    }
-
     public LocalTime getReminderTime() {
         return reminderTime;
-    }
-
-    public void setReminderTime(LocalTime reminderTime) {
-        this.reminderTime = reminderTime;
     }
 
     public Employee getEmployee() {

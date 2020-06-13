@@ -38,7 +38,7 @@ public class AddEmployeeForm extends JFrame {
                 if(Employee.searchEmployee(tempEmployee.getId()).getId() != 0)
                     new popUP("User already exist");
                 else {
-                    tempEmployee.addEmployee();
+                    Employee.addEmployee(tempEmployee);
                     ap.refreshEmployeeBox();
                     dispose();
                 }

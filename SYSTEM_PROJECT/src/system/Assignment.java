@@ -19,7 +19,7 @@ public class Assignment {
     private LocalDate madeDate;
     private Employee assignedTo;
     private int priority = 1; // 1 - low priority ... 3 - High priority
-    private int status;// 1 - Not done , 2 - In progress , 3 - Done
+    private Status status;// 1 - Not done , 2 - In progress , 3 - Done
     private String title;
     private String context;
     private static Assignment[] assignments = setAssignmentsInFunc();
@@ -74,11 +74,11 @@ public class Assignment {
         this.context = context;
     }
 
-    public int getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
@@ -89,7 +89,13 @@ public class Assignment {
     public Assignment(int assignmentNum, LocalTime madeTime, LocalDate madeDate, Employee assignTo,int priority,int status,  String title, String context) {
         this.assignmentNum = assignmentNum;
         this.priority = priority;
-        this.status = status;
+        switch (status){
+            case 1: this.status = new NotDone();
+            break;
+            case 2: this.status = new InProgress();
+            break;
+            case 3: this.status = new Done();
+        }
         this.assignedTo = assignTo;
         this.madeTime = madeTime;
         this.madeDate = madeDate;
@@ -112,7 +118,7 @@ public class Assignment {
         System.out.println("Time: " + this.getMadeTime().format(myFormatObj));
         System.out.println("Assigned to: " + this.getAssignedTo().getName());
         System.out.println("Priority is: " + this.getPriority());
-        System.out.println("Status is: " + this.getStatus());
+        System.out.println("Status is: " + this.getStatus().status());
         System.out.println("Title:" + this.getTitle());
         System.out.println("Context: " + this.getContext());
 
@@ -168,7 +174,7 @@ public class Assignment {
             writer.newLine();
             writer.append(Integer.toString(this.getPriority()));
             writer.newLine();
-            writer.append(Integer.toString(this.getStatus()));
+            writer.append(Integer.toString(this.getStatus().status()));
             writer.newLine();
             writer.append(this.getTitle());
             writer.newLine();
@@ -216,7 +222,7 @@ public class Assignment {
                 writer.newLine();
                 writer.append(Integer.toString(assignments[i].getPriority()));
                 writer.newLine();
-                writer.append(Integer.toString(assignments[i].getStatus()));
+                writer.append(Integer.toString(assignments[i].getStatus().status()));
                 writer.newLine();
                 writer.append(assignments[i].getTitle());
                 writer.newLine();

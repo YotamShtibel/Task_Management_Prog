@@ -3,14 +3,10 @@ Yotam
 1111
 true
 1
-employee1
+employee
 1
 false
 2
 manager2
 2
-true
-204786107
-ShirlyTheSecondBest
-1
 true

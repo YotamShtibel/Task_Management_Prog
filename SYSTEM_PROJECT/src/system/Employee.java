@@ -122,9 +122,9 @@ public class Employee {
       }
     }
 
-    public void addEmployee(){
-        this.addEmployeeToFile();
-        employees[NumOfEmployees] = this;
+    public static void addEmployee(Employee employee){
+        employee.addEmployeeToFile();
+        employees[NumOfEmployees] = employee;
         NumOfEmployees++;
     }
 
