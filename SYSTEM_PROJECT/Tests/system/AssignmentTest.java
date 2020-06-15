@@ -1,16 +1,20 @@
 package system;
 
+
 import org.junit.Test;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class AssignmentTest extends EmployeeTest {
 
     protected static Assignment assignment = new Assignment(555, LocalTime.now(), LocalDate.now(),
             employee, 1,  new NotDone().status(),"title","context" );
+
+
 
     @Test
     public void getAssignmentNum() {

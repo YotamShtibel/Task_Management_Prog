@@ -38,7 +38,7 @@ public class deleteTaskForm extends JFrame {
                     if (!taskNumField.getText().isEmpty() ) {
                         Assignment assignment = Assignment.searchAssignment(Integer.parseInt(taskNumField.getText()));
                         if (assignment == null) {
-                            Message.setText("can't find task by number");
+                            Message.setText("Can't find a task by this number.");
                             Message.setVisible(true);
                         }else{
                             Reminder.removeTask(assignment.getAssignmentNum());
@@ -49,7 +49,7 @@ public class deleteTaskForm extends JFrame {
                             if (!taskTitleField.getText().isEmpty()) {
                                  Assignment assignment = Assignment.searchAssignment(taskTitleField.getText());
                                 if (assignment == null) {
-                                    Message.setText("can't find task by title");
+                                    Message.setText("Can't find a task by this title.");
                                     Message.setVisible(true);
                                 }else{
                                     Reminder.removeTask(assignment.getAssignmentNum());

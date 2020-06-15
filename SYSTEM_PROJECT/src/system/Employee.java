@@ -1,7 +1,9 @@
 package system;
 
-import java.io.*;
-import java.util.Formatter;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Employee {
@@ -83,7 +85,7 @@ public class Employee {
             }
             x.close();
         } catch (IOException e) {
-            System.out.println("error occurred in Employee/getEmployee");
+            System.out.println("Error occurred in Employee/getEmployee");
         }
 
         return employees;

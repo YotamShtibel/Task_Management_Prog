@@ -73,6 +73,9 @@ public class AssignmentDetails extends JFrame {
                         else if (doneRadioButton.isSelected())
                             assignment.setStatus(new Done());
                         assignment.setAssignedTo(Employee.searchEmployee(((String) assignedToBox.getSelectedItem())));
+                    }else{
+                        if(!ap.getUser().isManager())
+                        new popUP("Only a manager can assign tasks to other people.");
                     }
 
 
@@ -81,7 +84,7 @@ public class AssignmentDetails extends JFrame {
                         assignment.setTitle(titleField.getText());
                         assignment.setContext(contextArea.getText());
                     }}else
-                    new popUP("Only manager can change that field");
+                    new popUP("Only a manager can change that field.");
 
                 ap.setAssignmentList();
                 Assignment.refreshData();

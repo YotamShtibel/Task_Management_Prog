@@ -36,7 +36,7 @@ public class AddEmployeeForm extends JFrame {
 
                 Employee tempEmployee = new Employee(Integer.parseInt(textField2.getText()),textField1.getText(),Integer.parseInt(textField3.getText()),checkBox1.isSelected());
                 if(Employee.searchEmployee(tempEmployee.getId()).getId() != 0)
-                    new popUP("User already exist");
+                    new popUP("This user is already in the system.");
                 else {
                     Employee.addEmployee(tempEmployee);
                     ap.refreshEmployeeBox();

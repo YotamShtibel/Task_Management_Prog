@@ -116,7 +116,7 @@ public class app extends JFrame {
 
         Document document = new Document();
         try {
-            PdfWriter.getInstance(document, new FileOutputStream("Summery.pdf"));
+            PdfWriter.getInstance(document, new FileOutputStream("Summary.pdf"));
         } catch (DocumentException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
@@ -127,7 +127,7 @@ public class app extends JFrame {
 
         //setting title
         Font font = FontFactory.getFont(FontFactory.COURIER, 22, BaseColor.BLACK);
-        Chunk chunk = new Chunk("Task Summery:", font);
+        Chunk chunk = new Chunk("Tasks Summary:", font);
         chunk.setUnderline(0,-2);
         try {
             document.add(chunk);
@@ -155,15 +155,15 @@ public class app extends JFrame {
                     String Task = " ";
                     Task = Task + "  " + "Task number: " + assignments[j].getAssignmentNum() + " is ";
                     if (assignments[j].getStatus().status() == 1) {
-                        Task = Task + "NOT DONE";
+                        Task = Task + "NOT DONE \n";
                         font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.RED);
                     }
                     else if (assignments[j].getStatus().status() == 2) {
-                        Task = Task + "IN PROGRESS";
+                        Task = Task + "IN PROGRESS\n";
                         font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.GRAY);
                     }
                     else {
-                        Task = Task + "DONE";
+                        Task = Task + "DONE\n";
                         font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.GREEN);
                     }
 
@@ -337,7 +337,7 @@ public class app extends JFrame {
                 if (User == null)
                     new popUP("Must log-in first");
                 else{if(!User.isManager()){
-                    new popUP("Only manager can enter!");}
+                    new popUP("Only a manager can access!");}
                 else{new AddEmployeeForm(app.this);}}
 
 }
@@ -362,8 +362,8 @@ public class app extends JFrame {
                 if (User == null)
                     new popUP("Must log-in first");
                 else{if(!User.isManager()){
-                    new popUP("Only manager can enter!");}
-                else{new RemoveEmployee();}}
+                    new popUP("Only a manager can access!");}
+                else{new RemoveEmployee(app.this);}}
 
             }
         });
@@ -389,7 +389,7 @@ public class app extends JFrame {
                 if (User == null)
                     new popUP("Must log-in first");
                 else{if(!User.isManager()){
-                    new popUP("Only manager can enter!");}
+                    new popUP("Only a manager can access!");}
                 else{new deleteTaskForm(app.this);}}
 
             }
@@ -406,7 +406,7 @@ public class app extends JFrame {
                     employeeBox.setSelectedIndex(0);
                 }else {
                     if (!User.isManager()) {
-                        new popUP("Only manager can access");
+                        new popUP("Only a manager can access");
                         employeeBox.setSelectedIndex(0);
                     }
                 }

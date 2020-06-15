@@ -11,7 +11,7 @@ public class RemoveEmployee extends JFrame{
     private JButton confirmButton;
     private JLabel Message;
 
-    public RemoveEmployee(){
+    public RemoveEmployee(app ap){
 
         //Creating Frame
         this.add(MainRemovePanel);
@@ -29,10 +29,11 @@ public class RemoveEmployee extends JFrame{
                         if (!employeeId.getText().isEmpty() ) {
                             Employee employee = Employee.searchEmployee(Integer.parseInt(employeeId.getText()));
                             if(employee.getName() == "no employee"){
-                                Message.setText("can't find employee");
+                                Message.setText("Can't find any employee by this ID.");
                                 Message.setVisible(true);
                             }else{
                                 Employee.removeEmployee(employee);
+                                ap.refreshEmployeeBox();
                                 dispose();
                             }
                         }

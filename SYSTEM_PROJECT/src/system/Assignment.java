@@ -151,7 +151,7 @@ public class Assignment {
             }
             x.close();
         } catch (Exception e) {
-            System.out.println("error occurred in Assignment/setAssignmentsInFunc");
+            System.out.println("Error occurred in Assignment/setAssignmentsInFunc");
         }
 
         return assignments;
@@ -182,7 +182,7 @@ public class Assignment {
             writer.close();
 
         }catch (IOException e){
-            System.out.println("error occurred in Assignment/addAssignmentToFile");
+            System.out.println("Error occurred in Assignment/addAssignmentToFile");
 
         }
     }
@@ -234,7 +234,7 @@ public class Assignment {
 
             writer.close();
         }catch (IOException e){
-            System.out.println("error occurred in Assignment/refreshData");
+            System.out.println("Error occurred in Assignment/refreshData");
 
         }
     } // moving data from array to file
