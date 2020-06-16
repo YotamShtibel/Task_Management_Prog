@@ -20,95 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b35a86d-b3b1-4f33-8ebc-9ac9fa659bdb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Libraries.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Libraries.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alarms_Data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignments_Data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employees_Data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/SYSTEM_PROJECT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/SYSTEM_PROJECT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/Tests/system/AssignmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/Tests/system/AssignmentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/Tests/system/EmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/Tests/system/EmployeeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/Tests/system/ReminderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/Tests/system/ReminderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/AddEmployeeForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/AddEmployeeForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/AddEmployeeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/AddEmployeeForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Alarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Alarm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Assignment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/AssignmentDetails.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/AssignmentDetails.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/AssignmentDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/AssignmentDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/LogInForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/LogInForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/LogInForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/LogInForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Reminder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Reminder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/RemoveEmployee.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/RemoveEmployee.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/RemoveEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/RemoveEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/addTaskForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/addTaskForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/addTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/addTaskForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/app.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/app.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/app.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/app.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/deleteTaskForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/deleteTaskForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/deleteTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/deleteTaskForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/makeReminderForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/makeReminderForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/makeReminderForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/makeReminderForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/popUP.form" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/popUP.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/popUP.java" beforeDir="false" afterPath="$PROJECT_DIR$/SYSTEM_PROJECT/src/system/popUP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Summery.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_Management_Prog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Task_Management_Prog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AddEmployeeForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AddEmployeeForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AddEmployeeForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AddEmployeeForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AddEmployeeForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AddEmployeeForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Alarm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Alarm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Assignment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Assignment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AssignmentDetails$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AssignmentDetails$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AssignmentDetails$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AssignmentDetails$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AssignmentDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/AssignmentDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Done.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Done.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/InProgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/InProgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/LogInForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/LogInForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/LogInForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/LogInForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/LogInForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/LogInForm$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/LogInForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/LogInForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/NotDone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/NotDone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Reminder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Reminder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/RemoveEmployee$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/RemoveEmployee$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/RemoveEmployee$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/RemoveEmployee$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/RemoveEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/RemoveEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/addTaskForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/app.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/deleteTaskForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/deleteTaskForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/deleteTaskForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/deleteTaskForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/deleteTaskForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/deleteTaskForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/makeReminderForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/popUP$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/popUP$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/popUP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task_Management_Prog/system/popUP.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,25 +209,25 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1592035904205" />
-    <state width="1638" height="268" key="GridCell.Tab.0.bottom" timestamp="1592215389111">
+    <state width="1342" height="268" key="GridCell.Tab.0.bottom" timestamp="1592329323954">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="268" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1592215389111" />
+    <state width="1342" height="268" key="GridCell.Tab.0.bottom/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1592329323954" />
     <state width="1878" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591544532016" />
-    <state width="1638" height="268" key="GridCell.Tab.0.center" timestamp="1592215389111">
+    <state width="1342" height="268" key="GridCell.Tab.0.center" timestamp="1592329323953">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="268" key="GridCell.Tab.0.center/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1592215389111" />
+    <state width="1342" height="268" key="GridCell.Tab.0.center/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1592329323953" />
     <state width="1878" height="273" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591544532016" />
-    <state width="1638" height="268" key="GridCell.Tab.0.left" timestamp="1592215389111">
+    <state width="1342" height="268" key="GridCell.Tab.0.left" timestamp="1592329323953">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="268" key="GridCell.Tab.0.left/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1592215389111" />
+    <state width="1342" height="268" key="GridCell.Tab.0.left/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1592329323953" />
     <state width="1878" height="273" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591544532015" />
-    <state width="1638" height="268" key="GridCell.Tab.0.right" timestamp="1592215389111">
+    <state width="1342" height="268" key="GridCell.Tab.0.right" timestamp="1592329323954">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1638" height="268" key="GridCell.Tab.0.right/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1592215389111" />
+    <state width="1342" height="268" key="GridCell.Tab.0.right/0.0.1680.1010/-1680.0.1680.1050@0.0.1680.1010" timestamp="1592329323954" />
     <state width="1878" height="273" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591544532016" />
     <state width="1638" height="330" key="GridCell.Tab.1.bottom" timestamp="1592037127801">
       <screen x="0" y="0" width="1680" height="1010" />

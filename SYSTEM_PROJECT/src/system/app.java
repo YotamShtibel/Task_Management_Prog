@@ -232,8 +232,8 @@ public class app extends JFrame {
 
 
         //setting manager
-        Employee manager = new Employee(205662398,"Yotam",1111,true);
-        if (Employee.searchEmployee(205662398).getId() != 205662398)
+        Employee manager = new Employee(111,"Yotam",111,true);
+        if (Employee.searchEmployee(111).getId() != 111)
             Employee.addEmployee(manager);
 
 
